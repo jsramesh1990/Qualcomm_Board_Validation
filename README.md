@@ -56,7 +56,18 @@ Reports & Outputs
 - Automated test runners and reports
 
 ## Example Virtual Output
-![Uploading ChatGPT Image Jun 4, 2026, 03_01_30 PM.png…]()
+
+Qualcomm_Board_Validation/
+│
+├── docs/
+│   └── images/
+│       └── qualcomm_virtual_dashboard.png
+│
+├── drivers/
+├── simulation/
+├── tests/
+├── outputs/
+└── README.md
 
 
 
