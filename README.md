@@ -1,4 +1,3 @@
-
 # Qualcomm Board Validation Advanced Modular Simulation Project
 
 ![C](https://img.shields.io/badge/C-Low_Level_Drivers-blue)
@@ -7,69 +6,80 @@
 ![Embedded](https://img.shields.io/badge/Embedded-Qualcomm_Workflow-purple)
 ![Status](https://img.shields.io/badge/Status-Active_Development-success)
 
-## Overview
-A large-scale modular Qualcomm board validation and simulation framework designed to model embedded hardware bring-up, driver validation, and automated testing workflows.
+A modular Qualcomm board validation and simulation framework designed to model embedded hardware bring-up, driver validation, and automated testing workflows.
 
-This repository mixes **C**, **C++**, and **Python** to simulate realistic embedded development patterns:
-- **C** → low-level hardware drivers
-- **C++** → device abstraction and simulation engines
-- **Python** → automation, dashboards, logs, and test orchestration
+---
+
+## Overview
+
+This project combines **C**, **C++**, and **Python** to simulate realistic embedded software development environments and board validation workflows.
+
+### Technology Stack
+
+| Language | Purpose                                                 |
+| -------- | ------------------------------------------------------- |
+| C        | Low-level hardware drivers                              |
+| C++      | Device abstraction and simulation engines               |
+| Python   | Automation, dashboards, logging, and test orchestration |
+
+---
 
 ## Architecture Flow
+
 ```text
 Boot Sequence
-   ↓
+      │
+      ▼
 Peripheral Initialization
-   ↓
+      │
+      ▼
 Driver Layer Bring-up
-   ├── PMIC ADC / Thermistor
-   ├── USB Host/Device
-   ├── CAN Bus
-   ├── SD Card
-   ├── LED Control
-   └── INA231 Power Monitor
-   ↓
+ ├── PMIC ADC / Thermistor
+ ├── USB Host / Device
+ ├── CAN Bus
+ ├── SD Card
+ ├── LED Control
+ └── INA231 Power Monitor
+      │
+      ▼
 Simulation Engine
-   ├── Sensor Simulation
-   ├── Event Injection
-   ├── Dashboard Rendering
-   └── Log Collection
-   ↓
+ ├── Sensor Simulation
+ ├── Event Injection
+ ├── Dashboard Rendering
+ └── Log Collection
+      │
+      ▼
 Automated Testing
-   ├── Unit Tests
-   ├── Integration Tests
-   └── Regression Tests
-   ↓
+ ├── Unit Tests
+ ├── Integration Tests
+ └── Regression Tests
+      │
+      ▼
 Reports & Outputs
 ```
 
+---
+
 ## Features
-- Modular embedded driver architecture
-- PMIC ADC multi-channel simulation
-- Thermistor monitoring
-- USB hotplug and enumeration simulation
-- CAN traffic generator and loopback validation
-- SD card insert/remove and filesystem simulation
-- LED blink pattern and PWM simulation
-- INA231 voltage/current/power monitoring
-- Virtual dashboard console output
-- Automated test runners and reports
+
+* Modular embedded driver architecture
+* PMIC ADC multi-channel simulation
+* Thermistor monitoring
+* USB hotplug and enumeration simulation
+* CAN traffic generator and loopback validation
+* SD card insertion/removal and filesystem simulation
+* LED blink pattern and PWM simulation
+* INA231 voltage, current, and power monitoring
+* Virtual dashboard console output
+* Automated test execution and reporting
+
+---
 
 ## Example Virtual Output
 
-Qualcomm_Board_Validation/
-│
-├── docs/
-│   └── images/
-│       └── qualcomm_virtual_dashboard.png
-│
-├── drivers/
-├── simulation/
-├── tests/
-├── outputs/
-└── README.md
-
-
+<p align="center">
+  <img src="docs/images/qualcomm_virtual_dashboard.png" alt="Qualcomm Board Virtual Dashboard" width="100%">
+</p>
 
 ```text
 [BOOT] Qualcomm board initialized
@@ -81,42 +91,64 @@ Qualcomm_Board_Validation/
 [LED] Blink pattern HEARTBEAT active
 ```
 
+---
+
 ## Build & Run
-### Build all modules
+
+### Build All Modules
+
 ```bash
 ./scripts/build_all.sh
 ```
 
-### Run simulation
+### Run Simulation
+
 ```bash
 ./scripts/run_simulation.sh
 ```
 
-### Run tests
+### Execute Tests
+
 ```bash
 ./scripts/run_tests.sh
 ```
 
-## Directory Highlights
-- `drivers/` → embedded peripheral drivers
-- `simulation/` → virtual hardware and dashboards
-- `tests/` → unit, integration, regression tests
-- `outputs/` → logs, reports, screenshots
-- `docs/` → architecture and learning guides
+---
+
+## Repository Structure
+
+```text
+Qualcomm_Board_Validation/
+│
+├── drivers/          Embedded peripheral drivers
+├── simulation/       Virtual hardware and dashboard modules
+├── tests/            Unit, integration, and regression tests
+├── outputs/          Logs, reports, and generated artifacts
+├── docs/             Architecture and learning documentation
+└── scripts/          Build and execution scripts
+```
+
+---
 
 ## Learning Outcomes
-- Embedded driver lifecycle
-- Qualcomm board bring-up concepts
-- Hardware abstraction layer design
-- Interrupt and event-driven systems
-- Validation automation pipelines
-- Mixed-language embedded project organization
+
+* Embedded driver lifecycle understanding
+* Qualcomm board bring-up concepts
+* Hardware abstraction layer (HAL) design
+* Event-driven and interrupt-based architectures
+* Validation automation workflows
+* Multi-language embedded project organization
+
+---
 
 ## Future Improvements
-- UART console simulator
-- I2C transaction viewer
-- SPI peripheral simulation
-- Linux DTS parser
-- Interactive web dashboard
+
+* UART console simulator
+* I2C transaction viewer
+* SPI peripheral simulation
+* Linux DTS parser
+* Interactive web dashboard
+
+---
 
 
