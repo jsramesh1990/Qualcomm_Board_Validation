@@ -56,6 +56,10 @@ Reports & Outputs
 - Automated test runners and reports
 
 ## Example Virtual Output
+![Uploading ChatGPT Image Jun 4, 2026, 03_01_30 PM.png…]()
+
+
+
 ```text
 [BOOT] Qualcomm board initialized
 [USB] Device connected -> enumeration success
@@ -104,5 +108,4 @@ Reports & Outputs
 - Linux DTS parser
 - Interactive web dashboard
 
-## License
-MIT License
+
